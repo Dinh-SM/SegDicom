@@ -1,0 +1,33 @@
+<div class="flex-home">
+    <div class="left-side">
+        <h1>{{ 'Home.HelloSegmenter' | translate }} 🩻</h1>
+        <p>{{ 'Home.Message' | translate }}</p>
+    </div>
+    <div class="divider" role="separator" aria-label="Divider"></div>
+        <div class="right-side">
+            <div class="pill-group">
+                @for (item of [
+                                { title: 'Google Angular 17.2.0', link: 'https://angular.dev', icon: 'fa-brands fa-angular' },
+                                { title: 'Microsoft .NET 8', link: 'https://dotnet.microsoft.com', icon: 'fa-brands fa-microsoft' },
+                                { title: 'Fellow Oak DICOM 5.1.2', link: 'https://fo-dicom.github.io', icon: 'fa-solid fa-seedling' },
+                                { title: 'ngx-translate 15.0.0', link: 'https://github.com/ngx-translate/core', icon: 'fa-solid fa-globe' },
+                                { title: 'W3Schools CSS Tutorial', link: 'https://www.w3schools.com/css', icon: 'fa-brands fa-css3' },
+                            ]; track item.title)
+                {
+                    <a class="pill"
+                        [href]="item.link"
+                        target="_blank"
+                        rel="noopener">
+                        <span><i class="{{ item.icon }}"></i> {{ item.title }}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                                height="14"
+                                viewBox="0 -960 960 960"
+                                width="14"
+                                fill="currentColor">
+                            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
+                        </svg>
+                    </a>
+                }
+        </div>
+    </div>
+</div>

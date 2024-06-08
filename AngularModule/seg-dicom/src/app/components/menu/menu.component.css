@@ -1,0 +1,57 @@
+.sidenav {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 70px;
+    left: 0;
+    overflow-x: hidden;
+    transition: var(--default-transition-time);
+    white-space: nowrap;
+    background-color: var(--light-block-background-color);
+    border-radius: 0 var(--default-border-radius) var(--default-border-radius) 0;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px var(--default-padding);
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: var(--default-transition-time);
+    color: inherit;
+    user-select: none;
+}
+
+.sidenav a:hover {
+    opacity: 50%;
+}
+
+#navDisplayButton {
+    cursor: pointer;
+    transition: var(--default-transition-time);
+    position: fixed;
+    z-index: 99999;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#navDisplayButton>i {
+    font-size: 30px;
+}
+
+#themeSwitchButton {
+    cursor: pointer;
+    transition: var(--default-transition-time);
+    position: fixed;
+    z-index: 99999;
+    right: 20px;
+    bottom: 15px;
+}
+
+#themeSwitchButton>i {
+    font-size: 30px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

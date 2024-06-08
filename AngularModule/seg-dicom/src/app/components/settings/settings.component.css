@@ -1,0 +1,24 @@
+.settings-container {
+    margin-top: 70px;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+select {
+    border-radius: var(--default-border-radius);
+    padding: var(--default-padding);
+    margin: var(--default-margin);
+    font-size: 1rem;
+    width: 50%;
+    border: none;
+
+    option {
+        border-radius: var(--default-border-radius);
+        padding: var(--default-padding);
+        margin: var(--default-margin);
+        font-size: 1rem;
+    }
+}
+

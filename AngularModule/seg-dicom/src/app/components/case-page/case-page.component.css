@@ -1,0 +1,101 @@
+.flex-case {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translate(-50%, -0%);
+    width: 75%;
+    padding-bottom: 100px;
+}
+
+.right-side {
+    background-color: var(--light-block-background-color);
+    border-radius: var(--default-border-radius);
+    padding: var(--default-padding);
+    transition: var(--default-transition-time);
+    width: 70%;
+    min-height: 70vh;
+
+    #case-segmentation-grid {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: var(--default-margin); 
+        padding: var(--default-padding);
+    }
+
+    .case-segmentation {
+        position: relative;
+        border-radius: var(--default-border-radius);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 3;
+        cursor: pointer;
+    
+        .case-segmentation-image {
+            margin: 0 auto;
+            height: auto;
+            width: 200px;
+            border-radius: var(--default-border-radius);
+            transition: var(--default-transition-time);
+        }
+        
+        p {
+            font-size: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 160px;
+            transition: var(--default-transition-time);
+            margin-top: 0.25rem;
+        }
+    }
+}
+
+a {
+    color: inherit;
+}
+
+.button {
+    margin-top: var(--default-margin);
+    color: var(--dark-font-color);
+}
+
+.button-group {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+p {
+    margin-top: 1rem;
+}
+
+h1#case-name {
+    overflow-wrap: anywhere;
+}
+
+p.case-info {
+    margin-top: 0.5rem;
+    margin-left: 5%;
+    overflow-wrap: break-word;
+}
+
+.left-side {
+    max-width: 30%;
+    margin-right: var(--default-margin);
+}
+
+b {
+    font-size: 1.25rem;
+    margin-right: 20px;
+}
+
+.edit-mode {
+    padding: 15px;
+    border-radius: var(--default-border-radius);
+    overflow-wrap: anywhere;
+}

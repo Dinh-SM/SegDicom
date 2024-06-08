@@ -1,0 +1,9 @@
+<span id="navDisplayButton" (click)="openOrCloseNav()"><i class="fa-solid fa-{{navDisplayIcon}}"></i></span>
+<span id="themeSwitchButton" (click)="switchColorTheme()"><i class="fa-solid fa-{{themeSwitchIcon}}"></i></span>
+
+<div id="menu" class="sidenav">
+    <a [routerLink]="RouteLinks.Home">🏥 {{ 'Nav.Home' | translate }}</a>
+    <a [routerLink]="RouteLinks.CreateCase">💉 {{ 'Nav.CreateCase' | translate }}</a>
+    <a [routerLink]="RouteLinks.CaseList">🩺 {{ 'Nav.CaseList' | translate }}</a>
+    <a [routerLink]="RouteLinks.Settings">⚙️ {{ 'Nav.Settings' | translate }}</a>
+</div>

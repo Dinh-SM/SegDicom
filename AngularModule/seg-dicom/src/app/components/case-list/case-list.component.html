@@ -1,0 +1,15 @@
+<div class="case-list-container">
+    <h1>{{ 'Nav.CaseList' | translate }}</h1>
+    <p>{{ 'CaseList.Message' | translate }}</p>
+    <div class="seg-grid" *ngIf="this.cases.length > 0">
+        <a [routerLink]="['/casePage', case.id]" *ngFor="let case of cases;">
+            <div class="seg-item">
+                <p>{{ case.name }}</p>
+                <p>{{ case.creationDate | date:'YYYY-MM-dd' }}</p>
+            </div>
+        </a>
+    </div>
+    <div class="no-case" *ngIf="this.cases.length === 0">
+        <h2>No case found or created</h2>
+    </div>
+</div>

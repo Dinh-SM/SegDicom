@@ -1,0 +1,113 @@
+.create-case-container {
+    margin-top: 50px;
+}
+
+.text-input-container {
+    display: flex;
+
+    .text-input {
+        width: 50%;
+
+        input[type=text] {
+            border-radius: var(--default-border-radius);
+            padding: var(--default-padding);
+            font-size: 1rem;
+            border: none;
+            width: 87.5%;
+            color: inherit;
+
+            &.left-input {
+                float: right;
+            }
+        }
+    }
+}
+
+.dropzone {
+    background-color: var(--light-block-background-color);
+    border-radius: var(--default-border-radius);
+    padding: var(--default-padding);
+    margin-top: var(--default-margin);
+    position: relative;
+    min-height: 300px;
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    p {
+        text-align: center;
+        margin-top: .25rem;
+        font-size: 1.5rem;
+    }
+
+    i {
+        font-size: 50px;
+    }
+
+    .dicom-upload {
+        opacity: 0;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+    }
+
+    #dicom-grid {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        padding: var(--default-padding);
+    }
+
+    .uploaded-dicom {
+        position: relative;
+        border-radius: var(--default-border-radius);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 3;
+        cursor: pointer;
+    
+        .uploaded-dicom-image {
+            margin: 0 auto;
+            height: auto;
+            width: 150px;
+            transition: var(--default-transition-time);
+        }
+        
+        p {
+            font-size: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 160px;
+            transition: var(--default-transition-time);
+        }
+
+        &:hover {
+            .uploaded-dicom-image, p {
+                filter: blur(.075rem);
+            }
+
+            .delete-dicom {
+                visibility: visible;
+            }
+        }
+
+        .delete-dicom {
+            position: absolute;
+            visibility: hidden;
+            top: 25%;
+            color: whitesmoke;
+        }
+    }
+}

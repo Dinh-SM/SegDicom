@@ -1,0 +1,19 @@
+#spinner {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99999;
+    display: flex;
+    justify-content: space-around;
+    visibility: hidden;
+
+    img {
+        width: 10vh;
+        height: 10vh;
+        top: 50%;
+        position: absolute;
+        transform: translate(0, -50%);
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "Home": {
+        "HelloSegmenter": "Bonjour Segmenteur!",
+        "Message": "Téléversez et segmentez vos DICOMs avec aisance."
+    },
+
+    "Nav": {
+        "Home": "Accueil",
+        "CreateCase": "Créer un Cas",
+        "CaseList": "Liste de Cas",
+        "Settings": "Réglages",
+        "SwitchedToDarkModeInfo": "Passage au Mode Sombre",
+        "SwitchedToLightModeInfo": "Passage au Mode Clair"
+    },
+
+    "CreateCase": {
+        "Message": "Téléversez vos DICOMs et procédez à la segmentation.",
+        "Name": "Nom du cas",
+        "Description": "Description du cas",
+        "DragAndDropDicom": "Déposez vos DICOMs ici",
+        "Or": "ou",
+        "BrowseDicom": "Cherchez dans votre ordinateur",
+        "DeleteDicomButton": "Supprimer les DICOMs",
+        "SubmitButton": "Segmentation",
+        "NotDicomWarning": "Le fichier déposé n'est pas un DICOM",
+        "DicomDeletedSuccess": "Tous les DICOMs déposés ont été supprimés",
+        "DicomDeletedInfo": "Le fichier {{ fileName }} a été supprimé",
+        "FileAlreadyUploadedWarning": "Un fichier avec le même nom a déjà été téléversé",
+        "CreationSuccess": "Le cas a été créé avec succès"
+    },
+
+    "CaseList": {
+        "Message": "Tous vos précédents cas segmentés ou à segmenter.",
+        "Date": "Date"
+    },
+
+    "CasePage": {
+        "Case": "Cas",
+        "Description": "Description",
+        "CreationDate": "Date de Création",
+        "LastModificationDate": "Date de Dernière Modification",
+        "ExportSegmentation": "Exporter la Segmentation",
+        "Delete": "Supprimer le cas",
+        "ReturnToCaseList": "Revenir à la Liste de Cas",
+        "DeletionSuccess": "Le cas a été supprimé avec succès",
+        "SegmentationZipGenerated": "Segmentation générée avec succès",
+        "EditModeOn": "Activer le Mode Édition",
+        "EditModeOff": "Désactiver le Mode Édition",
+        "Update": "Mettre à Jour le Cas",
+        "UpdateSuccess": "Le cas a été mis à jour avec succès"
+    },
+
+    "Settings": {
+        "Message": "Personnalisez votre expérience.",
+        "Language": "Langue",
+        "Languages": "Langues",
+        "DefaultTheme": "Thème par défaut",
+        "Themes": "Thèmes",
+        "Dark": "Sombre",
+        "Light": "Clair",
+        "UpdateWarning": "Peut prendre un certain temps avant d'être mis à jour."
+    }
+}

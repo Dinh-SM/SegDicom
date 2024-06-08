@@ -1,0 +1,273 @@
+:root {
+    --default-font: Mukta;
+    --default-transition-time: .5s;
+    --light-block-background-color: rgba(250, 250, 250, .4);
+    --dark-block-background-color: rgba(25, 25, 25, .4);
+    --default-border-radius: 25px;
+    --default-padding: 20px;
+    --default-margin: 20px;
+    --light-font-color: rgb(25, 25, 25);
+    --dark-font-color: whitesmoke;
+    --success-color: limegreen;
+    --error-color: crimson;
+    --info-color: dodgerblue;
+    --warning-color: darkorange;
+}
+
+html, body {
+    height: 95%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--default-font), sans-serif;
+    background-image: url(./assets/images/light-background.jpg);
+    color: var(--light-font-color);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+    a {
+        .seg-item {
+            transition: var(--default-transition-time);
+            color: var(--light-font-color);
+        }
+
+        .seg-item:hover {
+            filter: brightness(50%);
+            transition: var(--default-transition-time);
+        }
+    }
+
+    a:link {
+        text-decoration: none;
+    } 
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    a:active {
+        text-decoration: none;
+    }
+
+    .social-links a svg path {
+        transition: fill var(--default-transition-time) ease;
+        fill: var(--light-font-color);
+    }
+
+    .social-links a:hover svg path {
+        fill: lightslategray;
+    }
+
+    .dropzone.droping {
+        transition: var(--default-transition-time);
+        filter: brightness(50%);
+    }
+
+    select {
+        background-color: var(--light-block-background-color);
+        color: var(--light-font-color);
+        transition: var(--default-transition-time);
+
+        option {
+            background-color: var(--light-block-background-color);
+            color: var(--light-font-color);
+        }
+
+        &:hover {
+            filter: brightness(50%);
+        }
+    }
+
+    .uploaded-dicom:hover {
+        background-color: var(--light-block-background-color);
+    }
+
+    .case-segmentation:hover, .case-segmentation.selected {
+        background-color: var(--light-block-background-color);
+    }
+
+    .text-input-container {
+        .text-input {
+            input[type=text] {
+                background-color: var(--light-block-background-color);
+            }
+        }
+    }
+
+    .edit-mode {
+        background-color: var(--light-block-background-color);
+    }
+}
+
+body.dark {
+    background-image: url(./assets/images/dark-background.jpg);
+    color: var(--dark-font-color);
+
+    .sidenav {
+        background-color: var(--dark-block-background-color);
+    }
+
+    .dropzone {
+        background-color: var(--dark-block-background-color);
+    }
+
+    .dropzone.droping {
+        filter: brightness(200%);
+    }
+
+    .seg-item {
+        background-color: var(--dark-block-background-color);
+    }
+
+    a {
+        .seg-item {
+            color: var(--dark-font-color);
+        }
+
+        .seg-item:hover {
+            filter: brightness(200%);
+        }
+    }
+
+    .social-links a svg path {
+        fill: var(--dark-font-color);
+    }
+    
+    .social-links a:hover svg path {
+        fill: lightslategray;
+    }
+    
+    .flex-case .right-side {
+        background-color: var(--dark-block-background-color);
+    }
+
+    select {
+        background-color: var(--dark-block-background-color);
+        color: var(--dark-font-color);
+        transition: var(--default-transition-time);
+
+        option {
+            background-color: black;
+            color: var(--dark-font-color);
+        }
+
+        &:hover {
+            filter: brightness(200%);
+        }
+    }
+
+    .case-segmentation:hover, .case-segmentation.selected {
+        background-color: var(--dark-block-background-color);
+    }
+
+    .uploaded-dicom:hover {
+        background-color: var(--dark-block-background-color);
+    }
+
+    .text-input-container {
+        .text-input {
+            input[type=text] {
+                background-color: var(--dark-block-background-color);
+            }
+        }
+    }
+
+    .edit-mode {
+        background-color: var(--dark-block-background-color);
+    }
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+b {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+main {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+    transition: margin-left var(--default-transition-time);
+    padding: var(--default-padding);
+}
+
+.content {
+    width: 100%;
+    max-width: 850px;
+    margin-bottom: 3rem;
+    transition: var(--default-transition-time);
+}
+
+.content p {
+    margin-top: 1.5rem;
+}
+
+.button {
+    float: right;
+    border: none;
+    padding: 15px 20px;
+    margin-top: var(--default-margin);
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--default-border-radius);
+    color: var(--dark-font-color);
+    cursor: pointer;
+    margin-left: 15px;
+    user-select: none;
+    transition: var(--default-transition-time);
+
+    &.valid {
+        background-color: var(--success-color);
+    }
+
+    &.cancel {
+        background-color: var(--error-color);
+    }
+
+    &.info {
+        background-color: var(--info-color);
+    }
+
+    &.warning {
+        background-color: var(--warning-color);
+    }
+
+    &.disabled {
+        background-color: gray;
+        filter: brightness(.75);
+        cursor: unset;
+    }
+}
+
+.button:hover {
+    filter: brightness(.75);
+}

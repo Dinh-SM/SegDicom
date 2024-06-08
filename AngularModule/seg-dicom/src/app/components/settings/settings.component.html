@@ -1,0 +1,22 @@
+<div class="settings-container">
+    <h1>{{ 'Nav.Settings' | translate }}</h1>
+    <p>{{ 'Settings.Message' | translate }}</p>
+    <h2><i class="fa-solid fa-language"></i> {{ 'Settings.Language' | translate }}</h2>
+    <select>
+        <option>{{ 'Settings.Languages' | translate }}</option>
+        <option (click)="changeLanguage(LanguageCodes.English)">🇨🇦 English</option>
+        <option (click)="changeLanguage(LanguageCodes.French)">🇫🇷 Français</option>
+        <option (click)="changeLanguage(LanguageCodes.Japanese)">🇯🇵 日本語</option>
+        <option (click)="changeLanguage(LanguageCodes.Vietnamese)">🇻🇳 Tiếng Việt</option>
+    </select>
+    
+    <h2><i class="fa-regular fa-circle"></i> {{ 'Settings.DefaultTheme' | translate }}</h2>
+    <select>
+        <option>{{ 'Settings.Themes' | translate }}</option>
+        <option (click)="changeTheme('dark')">🌙 {{ 'Settings.Dark' | translate }}</option>
+        <option (click)="changeTheme('light')">☀️ {{ 'Settings.Light' | translate }}</option>
+    </select>
+    <p>
+        <small><i class="fa-solid fa-circle-exclamation"></i> {{ 'Settings.UpdateWarning' | translate }}</small>
+    </p>
+</div>

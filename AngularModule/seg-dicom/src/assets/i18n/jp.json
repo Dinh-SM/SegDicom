@@ -1,0 +1,63 @@
+{
+    "Home": {
+        "HelloSegmenter": "今日はセグメンター!",
+        "Message": "DICOMを簡単にアップロードしてセグメント化できます。"
+    },
+
+    "Nav": {
+        "Home": "トップ",
+        "CreateCase": "事例を作る",
+        "CaseList": "事例リスト",
+        "Settings": "設定",
+        "SwitchedToDarkModeInfo": "ダークモードに変更されました",
+        "SwitchedToLightModeInfo": "ライトモードに変更されました"
+    },
+
+    "CreateCase": {
+        "Message": "DICOMをアップロードし、セグメント化に進みます。",
+        "Name": "事例の名前",
+        "Description": "事例の説明",
+        "DragAndDropDicom": "ここにDICOMをドロップして下さい",
+        "Or": "または",
+        "BrowseDicom": "コンピュータで閲覧する",
+        "DeleteDicomButton": "DICOMを削除する",
+        "SubmitButton": "セグメント化する",
+        "NotDicomWarning": "ドロップしたファイルはDICOMではありません。",
+        "DicomDeletedSuccess": "すべてのドロップしたDICOMは削除されました",
+        "DicomDeletedInfo": "{{ fileName }} ファイルは削除されました",
+        "FileAlreadyUploadedWarning": "同じ名前のファイルはもうアップロードしました",
+        "CreationSuccess": "事例は成功に作れました"
+    },
+
+    "CaseList": {
+        "Message": "これまでのセグメント化した体験とセグメント化する体験",
+        "Date": "日付"
+    },
+
+    "CasePage": {
+        "Case": "事例",
+        "Description": "説明",
+        "CreationDate": "作成日",
+        "LastModificationDate": "最終更新日",
+        "ExportSegmentation": "セグメント化をエクスポートする",
+        "Delete": "事例を消す",
+        "ReturnToCaseList": "事例リストに戻る",
+        "DeletionSuccess": "事例は成功に削除されました",
+        "SegmentationZipGenerated": "セグメント化が正常に生成されました",
+        "EditModeOn": "編集モードを有効にする",
+        "EditModeOff": "編集モードを無効にする",
+        "Update": "事例を更新する",
+        "UpdateSuccess": "事例は成功に更新されました"
+    },
+
+    "Settings": {
+        "Message": "体験をカスタマイズ。",
+        "Language": "言語",
+        "Languages": "言語",
+        "DefaultTheme": "デフォルトのテーマモード",
+        "Themes": "モード",
+        "Dark": "ダーク",
+        "Light": "ライト",
+        "UpdateWarning": "更新には少し時間がかかる場合があります。"
+    }
+}

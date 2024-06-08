@@ -1,0 +1,63 @@
+<div class="create-case-container">
+    <h1>{{ 'Nav.CreateCase' | translate }}</h1>
+    <p>{{ 'CreateCase.Message' | translate }}</p>
+
+    <div class="text-input-container">
+        <div class="text-input">
+            <h2>{{ 'CreateCase.Name' | translate }}</h2>
+            <input type="text"
+                maxlength="35"
+                placeholder="{{ 'CreateCase.Name' | translate }}"
+                [ngModel]="case.name"
+                (ngModelChange)="onNameChange($event)">
+        </div>
+
+        <div class="text-input">
+            <h2 style="margin-left: 2.5%;">{{ 'CreateCase.Description' | translate }}</h2>
+            <input class="left-input"
+                type="text"
+                maxlength="550"
+                placeholder="{{ 'CreateCase.Description' | translate }}"
+                [ngModel]="case.description"
+                (ngModelChange)="onDescriptionChange($event)">
+        </div>
+    </div>
+
+    <div class="dropzone"
+        id="dropzone"
+        appDragAndDrop
+        (fileDropped)="onFileDropped($event)"
+    >
+        <input class="dicom-upload"
+            type="file"
+            multiple
+            [accept]="acceptedFileTypes"
+            (change)="onFileBrowsed($event.target)"
+        />
+    
+        <div *ngIf="dicoms.length === 0">
+            <p><i class="fa-solid fa-upload"></i></p>
+            <p>{{ 'CreateCase.DragAndDropDicom' | translate }}</p>
+            <p>{{ 'CreateCase.Or' | translate }}</p>
+            <p>{{ 'CreateCase.BrowseDicom' | translate }}</p>
+        </div>
+    
+        <output id="dicom-grid" *ngIf="dicoms.length > 0">
+            <div class="uploaded-dicom" *ngFor="let dicom of dicoms; index as i" (click)="deleteFile(i)">
+                <img class="uploaded-dicom-image" [src]="fileImageUrls[dicoms.indexOf(dicom)]">
+                <p>{{ dicom.name }}</p>
+                <i class="fa-solid fa-xmark delete-dicom"></i>
+            </div>
+        </output>
+    </div>
+    <a class="button valid"
+        (click)="submitFiles()"
+        [ngClass]="{'disabled' : dicoms.length === 0 || !case.name}">
+            <i class="fa-solid fa-right-to-bracket"></i> {{ 'CreateCase.SubmitButton' | translate }}
+    </a>
+    <a class="button cancel"
+        (click)="deleteAllFiles()" 
+        [ngClass]="{'disabled' : dicoms.length === 0}">
+            <i class="fa-solid fa-trash"></i> {{ 'CreateCase.DeleteDicomButton' | translate }}
+    </a>
+</div>

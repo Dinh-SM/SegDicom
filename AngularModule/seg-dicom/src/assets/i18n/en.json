@@ -1,0 +1,63 @@
+{
+    "Home": {
+        "HelloSegmenter": "Hello Segmenter!",
+        "Message": "Upload and segment your DICOMs with ease."
+    },
+
+    "Nav": {
+        "Home": "Home",
+        "CreateCase": "Create Case",
+        "CaseList": "Case List",
+        "Settings": "Settings",
+        "SwitchedToDarkModeInfo": "Switched to Dark Mode",
+        "SwitchedToLightModeInfo": "Switched to Light Mode"
+    },
+
+    "CreateCase": {
+        "Message": "Upload your DICOMs and proceed to the segmentation.",
+        "Name": "Case Name",
+        "Description": "Case Description",
+        "DragAndDropDicom": "Drag and drop your DICOMs here",
+        "Or": "or",
+        "BrowseDicom": "Browse in your computer",
+        "DeleteDicomButton": "Delete DICOMs",
+        "SubmitButton": "Segment",
+        "NotDicomWarning": "The dropped file is not a DICOM",
+        "DicomDeletedSuccess": "All the dropped DICOMs were deleted",
+        "DicomDeletedInfo": "The {{ fileName }} file was deleted",
+        "FileAlreadyUploadedWarning": "A file with the same name was already uploaded",
+        "CreationSuccess": "The case was successfully created"
+    },
+
+    "CaseList": {
+        "Message": "All your previous segmented cases or cases to segment.",
+        "Date": "Date"
+    },
+
+    "CasePage": {
+        "Case": "Case",
+        "Description": "Description",
+        "CreationDate": "Creation Date",
+        "LastModificationDate": "Last Modification Date",
+        "ExportSegmentation": "Export Segmentation",
+        "Delete": "Delete Case",
+        "ReturnToCaseList": "Return to Case List",
+        "DeletionSuccess": "The case was successfully deleted",
+        "SegmentationZipGenerated": "Segmentation successfully generated",
+        "EditModeOn": "Enable Edit Mode",
+        "EditModeOff": "Disable Edit Mode",
+        "Update": "Update Case",
+        "UpdateSuccess": "The case was successfully updated"
+    },
+
+    "Settings": {
+        "Message": "Customize your experience.",
+        "Language": "Language",
+        "Languages": "Languages",
+        "DefaultTheme": "Default Theme",
+        "Themes": "Themes",
+        "Dark": "Dark",
+        "Light": "Light",
+        "UpdateWarning": "Might take a little time to update."
+    }
+}

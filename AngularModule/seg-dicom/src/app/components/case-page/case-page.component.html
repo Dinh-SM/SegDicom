@@ -1,0 +1,54 @@
+<div class="flex-case">
+    <div class="left-side">
+        <h1 id="case-name"
+            [attr.contenteditable]="isInEditMode"
+            [ngClass]="{'edit-mode' : isInEditMode}"
+            (change)="isCaseUpdatable()">{{ case?.name }}</h1>
+        <h3>{{ 'CasePage.Case' | translate }} #{{ case?.id }}</h3>
+        <p><b>{{ 'CasePage.Description' | translate }}</b></p>
+        <p class="case-info"
+            id="case-description"
+            [attr.contenteditable]="isInEditMode"
+            [ngClass]="{'edit-mode' : isInEditMode}"
+            (change)="isCaseUpdatable()">{{ case?.description }}</p>
+        <p><b>{{ 'CasePage.CreationDate' | translate }}</b></p>
+        <p class="case-info">{{ case?.creationDate | date:'YYYY-MM-dd HH:mm' }}</p>
+        <p *ngIf="case?.lastModificationDate"><b>{{ 'CasePage.LastModificationDate' | translate }}</b></p>
+        <p class="case-info"
+            *ngIf="case?.lastModificationDate">{{ case?.lastModificationDate | date:'YYYY-MM-dd HH:mm' }}</p>
+    </div>
+    <div class="right-side">
+        <output id="case-segmentation-grid">
+            <div class="case-segmentation" id="case-segmentation-{{i}}" tabindex="0" *ngFor="let segmentation of case?.segmentations; index as i" (click)="selectSegmentation(i)">
+                <img id="case-segmentation-gif-{{i}}" class="case-segmentation-image" src="../../../assets/images/loading.gif">
+                <p id="case-segmentation-name-{{i}}"> {{ segmentation.patientName }} </p>
+                <p id="case-segmentation-sex-{{i}}"> {{ segmentation.patientSex }} </p>
+                <p id="case-segmentation-birth-{{i}}"> {{ segmentation.patientBirthDate | date:'YYYY-MM-dd' }} </p>
+                <p id="case-segmentation-body-{{i}}"> {{ segmentation.bodyPart }} </p>
+            </div>
+        </output>
+    </div>
+
+    <div class="button-group">
+        <a class="button valid"
+            id="export-segmentation-button"
+            [ngClass]="{'disabled' : selectedSegmentation === -1}"
+            (click)="exportSegmentation()"
+            *ngIf="!isInEditMode"><i class="fa-solid fa-x-ray"></i> {{ 'CasePage.ExportSegmentation' | translate }}</a>
+        
+        <a class="button valid"
+            id="edit-case-button"
+            [ngClass]="{'disabled' : !isCaseUpdatable()}"
+            (click)="updateCase()"
+            *ngIf="isInEditMode"><i class="fa-solid fa-floppy-disk"></i> {{ 'CasePage.Update' | translate }}</a>
+
+        <a class="button warning"
+            (click)="activateEditMode()"><i class="fa-solid fa-pen-to-square"></i> {{ editModeLabel | translate }}</a>
+        
+        <a class="button cancel"
+            (click)="deleteCase()"><i class="fa-solid fa-trash"></i> {{ 'CasePage.Delete' | translate }}</a>
+        
+        <a class="button info"
+            [routerLink]="'/' + RouteLinks.CaseList"><i class="fa-solid fa-arrow-left"></i> {{ 'CasePage.ReturnToCaseList' | translate }}</a>
+    </div>
+</div>

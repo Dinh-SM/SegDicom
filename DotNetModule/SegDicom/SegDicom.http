@@ -1,0 +1,6 @@
+@SegDicom_HostAddress = http://localhost:5218
+
+GET {{SegDicom_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

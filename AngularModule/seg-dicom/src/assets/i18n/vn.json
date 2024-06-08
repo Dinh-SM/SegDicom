@@ -1,0 +1,63 @@
+{
+    "Home": {
+        "HelloSegmenter": "Xin chào Segmenter!",
+        "Message": "Tải lên và phân đoạn DICOM của bạn một cách dễ dàng."
+    },
+
+    "Nav": {
+        "Home": "Trang chủ",
+        "CreateCase": "Tạo trường hợp",
+        "CaseList": "Danh sách trường hợp",
+        "Settings": "Cài đặt",
+        "SwitchedToDarkModeInfo": "Chuyển sang Chế độ tối",
+        "SwitchedToLightModeInfo": "Chuyển sang Chế độ ánh sáng"
+    },
+
+    "CreateCase": {
+        "Message": "Tải DICOM của bạn lên và tiến hành phân đoạn.",
+        "Name": "Tên trường hợp",
+        "Description": "Mô tả trường hợp",
+        "DragAndDropDicom": "Kéo và thả DICOM của bạn vào đây",
+        "Or": "hoặc",
+        "BrowseDicom": "Duyệt trong máy tính của bạn",
+        "DeleteDicomButton": "Xóa DICOM",
+        "SubmitButton": "Bộ phận",
+        "NotDicomWarning": "Tệp bị rơi không phải là DICOM",
+        "DicomDeletedSuccess": "Tất cả các DICOM bị rơi đã bị xóa",
+        "DicomDeletedInfo": "Tệp {{ fileName }} đã bị xóa",
+        "FileAlreadyUploadedWarning": "Một tệp có cùng tên đã được tải lên",
+        "CreationSuccess": "Trường hợp đã được tạo thành công"
+    },
+
+    "CaseList": {
+        "Message": "Tất cả các trường hợp được phân đoạn trước đó của bạn hoặc các trường hợp cần phân đoạn.",
+        "Date": "Ngày"
+    },
+
+    "CasePage": {
+        "Case": "Trường hợp",
+        "Description": "Mô tả",
+        "CreationDate": "Ngày thành lập",
+        "LastModificationDate": "Ngày sửa đổi lần cuối",
+        "ExportSegmentation": "Phân đoạn xuất khẩu",
+        "Delete": "Xóa trường hợp",
+        "ReturnToCaseList": "Quay lại Danh sách Trường hợp",
+        "DeletionSuccess": "Vụ việc đã được xóa thành công",
+        "SegmentationZipGenerated": "Phân đoạn được tạo thành công",
+        "EditModeOn": "Bật Chế độ chỉnh sửa",
+        "EditModeOff": "Tắt Chế độ chỉnh sửa",
+        "Update": "Cập nhật trường hợp",
+        "UpdateSuccess": "Vụ việc đã được cập nhật thành công"
+    },
+
+    "Settings": {
+        "Message": "Tùy chỉnh trải nghiệm của bạn.",
+        "Language": "Ngôn ngữ",
+        "Languages": "Ngôn ngữ",
+        "DefaultTheme": "Giao diện mặc định",
+        "Themes": "Giao diện",
+        "Dark": "Chế độ tối",
+        "Light": "Chế độ ánh sáng",
+        "UpdateWarning": "Có thể mất một chút thời gian để cập nhật."
+    }
+}

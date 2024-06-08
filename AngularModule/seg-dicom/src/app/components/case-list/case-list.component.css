@@ -1,0 +1,45 @@
+.case-list-container {
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translate(-50%, -0%);
+    width: 85%;
+    padding-bottom: 2.5%;
+}
+
+.seg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 40px;
+    margin-top: var(--default-padding);
+}
+
+.seg-item {
+    background-color: var(--light-block-background-color);
+    border-radius: var(--default-border-radius);
+    padding: var(--default-padding);
+    margin-top: var(--default-margin);
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    margin-top: 0;
+
+    p {
+        margin-top: .25rem;
+        font-size: 1.5rem;
+    }
+}
+
+.no-case {
+    width: 100%;
+    height: 100%;
+    h2 {
+        position: absolute;
+        left: 50%;
+        top: 200%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        text-align: center;
+    }
+}
